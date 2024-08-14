@@ -69,12 +69,11 @@ public class BasketTests
         //arrange
         Basket basket = new Basket();
 
-        
 
         int expected = 10;
 
         //act
-        int result = basket.ChangeCapacity;
+        int result = basket.ChangeCapacity(10);
 
         //assert
         Assert.That(expected == result);

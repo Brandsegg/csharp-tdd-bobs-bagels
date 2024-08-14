@@ -33,5 +33,12 @@ namespace tdd_bobs_bagels.CSharp.Main
 
             return false;
         }
+
+        public int ChangeCapacity(int capacity)
+        {
+            MAX_CAPACITY = capacity;
+
+            return MAX_CAPACITY;
+        }
     }
 }
