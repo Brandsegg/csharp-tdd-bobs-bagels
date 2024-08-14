@@ -22,8 +22,14 @@ namespace tdd_bobs_bagels.CSharp.Main
             return false;
         }
 
-        public bool Remove(string v)
+        public bool Remove(string item)
         {
+            if (items.Contains(item))
+            {
+                items.Remove(item);
+                return true;
+            }
+
             return false;
         }
     }
