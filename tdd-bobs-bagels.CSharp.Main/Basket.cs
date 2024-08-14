@@ -9,11 +9,12 @@ namespace tdd_bobs_bagels.CSharp.Main
     public class Basket
     {
         private List<string> items = new List<string>();
+        private int MAX_CAPACITY = 5;
 
         public bool Add(string item)
         {
 
-            if(!items.Contains(item))
+            if(!items.Contains(item) && items.ToArray().Length < 5)
             {
                 items.Add(item);
                 return true;
