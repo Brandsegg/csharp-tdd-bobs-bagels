@@ -24,4 +24,19 @@ public class BasketTests
         //assert
         Assert.That(expected == result);
     }
+    [Test]
+    public void RemoveTest()
+    {
+        //arrange
+        Basket basket = new Basket();
+        basket.Add("Salmon Bagel");
+        
+        bool expected = true;
+
+        //act
+        bool result = basket.Remove("Salmon Bagel");
+
+        //assert
+        Assert.That(expected == result);
+    }
 }
