@@ -8,9 +8,18 @@ namespace tdd_bobs_bagels.CSharp.Main
 {
     public class Basket
     {
+        private List<string> items = new List<string>();
+
         public bool Add(string item)
         {
-            throw new NotImplementedException();
+
+            if(!items.Contains(item))
+            {
+                items.Add(item);
+                return true;
+            }
+
+            return false;
         }
     }
 }
