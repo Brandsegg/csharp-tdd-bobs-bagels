@@ -64,7 +64,7 @@ public class BasketTests
     }
 
     [Test]
-    public void ChaangeCapacityTest()
+    public void ChangeCapacityTest()
     {
         //arrange
         Basket basket = new Basket();
@@ -74,6 +74,23 @@ public class BasketTests
 
         //act
         int result = basket.ChangeCapacity(10);
+
+        //assert
+        Assert.That(expected == result);
+    }
+
+    [Test]
+    public void RemoveNonExistingItemTest()
+    {
+        //arrange
+        Basket basket = new Basket();
+        basket.Add("Cream Cheese Bagel");
+        basket.Add("Avocado Bagel");
+
+        bool expected = false;
+
+        //act
+        bool result= basket.Remove("Shrimp and mayo Bagel");
 
         //assert
         Assert.That(expected == result);
