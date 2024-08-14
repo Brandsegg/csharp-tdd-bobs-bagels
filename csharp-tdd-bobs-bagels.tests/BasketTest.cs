@@ -62,4 +62,23 @@ public class BasketTests
         //assert
         Assert.That(expected == result);
     }
+
+    [Test]
+    public void ChaangeCapacityTest()
+    {
+        //arrange
+        Basket basket = new Basket();
+
+        
+
+        int expected = 10;
+
+        //act
+        int result = basket.ChangeCapacity;
+
+        //assert
+        Assert.That(expected == result);
+    }
+
+
 }
